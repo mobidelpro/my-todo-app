@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my-todo-app</title>
+    <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
     <h1>پروژه فاز دوم بوتکمپ کوئرا  </h1>
@@ -16,25 +17,24 @@
             </div>
         </div>
         <ul>
-            <li><a href="#"><img src="./assets/images/home-2.svg" alt="خانه"> خانه</a></li>
+            <li id="home"><a href="#"><img src="./assets/images/home-2.svg" alt="خانه"> خانه</a></li>
             <li><a href="#"><img src="./assets/images/task-square.svg" alt="تسک ها"> تسک ها</a></li>
             <li><a href="#"><img src="./assets/images/calendar.svg" alt="تقویم"> تقویم</a></li>
             <li><a href="#"><img src="./assets/images/arrange-square-2.svg" alt="گزارشات"> گزارشات</a></li>
             <li><a href="#"><img src="./assets/images/setting.svg" alt="تنظیمات"> تنظیمات</a></li>
             <li><a href="#"><img src="./assets/images/24-support.svg" alt="پشتیبانی"> پشتیبانی</a></li>
             <li><a href="#"><img src="./assets/images/profile.svg" alt="پروفایل"> پروفایل</a></li>
-            <li><a href="#"><img src="./assets/images/logout.svg" alt="خروج"> خروج</a></li>
         </ul>
         <div class="toggle-button">
             <div class="light">
-                <img src="./assets/images/sun.svg" alt="sun">
-                <span>روشن</span>
+                <a href="#"><img src="./assets/images/sun.svg" alt="sun">روشن</a>
             </div>
             <div class="dark">
-                <img src="./assets/images/moon.svg" alt="moon">
-                <span>تاریک</span>
+                <a href="#"><img src="./assets/images/moon.svg" alt="moon">تاریک</a>
             </div>
         </div>
+        <hr>
+        <a class="exit" href="#"><img src="./assets/images/logout.svg" alt="خروج"> خروج</a>
     </aside>
     <main class="content">
         <section class="tasks-today">
