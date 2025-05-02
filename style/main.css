@@ -1,0 +1,50 @@
+:root {
+  /* رنگ اصلی */
+  --primary: #2c7ef8;
+  --primary-hover-light: #075cd9;
+  --on-primary-light: #ffffff;
+
+  /* رنگ‌های زمینه و سطح */
+  --surface-light: #ffffff;
+  --on-background-light: #191c1e;
+  --background-light: #ffffff;
+
+  /* رنگ‌های خنثی */
+  --White: #fefefe;
+  --neutral-100: #fefefe;
+  --neutral-200: #f5f6f8;
+  --neutral-300: #e1e0e5;
+  --neutral-400: #e1e0e5;
+  --neutral-500: #c8c7cb;
+  --neutral-600: #afaeb2;
+  --neutral-700: #7d7d7f;
+  --neutral-800: #646466;
+  --neutral-900: #323233;
+  --black: #000000;
+
+  /*  رنگ‌های وضعیت */
+  --success: #90f677;
+  --error: #e63946;
+}
+@font-face {
+    font-family: Abar;
+    src: url(../assets/fonts/AbarMid-Bold.ttf);
+}
+@font-face {
+    font-family: yekanBold;
+    src: url(../assets/fonts/YekanBakh-Bold.ttf);
+}
+@font-face {
+    font-family: yekanRegular;
+    src: url(../assets/fonts/YekanBakh-Regular.ttf);
+}
+@font-face {
+    font-family: yekanSemiBold;
+    src: url(../assets/fonts/YekanBakh-SemiBold.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
