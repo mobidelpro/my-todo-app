@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-todo-app</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="./assets/images/profile.png" alt="تصویر پروفایل" class="avatar">
+            <div class="info">
+                <h2>سلام، رویا</h2>
+                <p>سه‌شنبه، ۵ بهمن ۱۴۰۲</p>
+            </div>
+        </div>
+        <ul>
+            <li id="home"><a href="#"><img src="./assets/images/home-2.svg" alt="خانه"> خانه</a></li>
+            <li><a href="#"><img src="./assets/images/task-square.svg" alt="تسک ها"> تسک ها</a></li>
+            <li><a href="#"><img src="./assets/images/calendar.svg" alt="تقویم"> تقویم</a></li>
+            <li><a href="#"><img src="./assets/images/arrange-square-2.svg" alt="گزارشات"> گزارشات</a></li>
+            <li><a href="#"><img src="./assets/images/setting.svg" alt="تنظیمات"> تنظیمات</a></li>
+            <li><a href="#"><img src="./assets/images/24-support.svg" alt="پشتیبانی"> پشتیبانی</a></li>
+            <li><a href="#"><img src="./assets/images/profile.svg" alt="پروفایل"> پروفایل</a></li>
+        </ul>
+        <div class="toggle-button">
+            <div class="light">
+                <a href="#"><img src="./assets/images/sun.svg" alt="sun">روشن</a>
+            </div>
+            <div class="dark">
+                <a href="#"><img src="./assets/images/moon.svg" alt="moon">تاریک</a>
+            </div>
+        </div>
+        <hr>
+        <a class="exit" href="#"><img src="./assets/images/logout.svg" alt="خروج"> خروج</a>
+    </aside>
+    <main class="content">
+        <section class="tasks-today">
+            <h2>تسک‌های امروز</h2>
+            <p>3 تسک را باید انجام دهید.</p>
+            <button id="add-task">افزودن وظیفه جدید</button>
+            <ul id="task-list">
+                <li>جلسه با مدیران پروژه</li>
+                <li>خرید میوه و سبزیجات و لبنیات برای خانه</li>
+                <li>تماس با جمشید</li>
+            </ul>
+        </section>
+        <section class="tasks-done">
+            <h2>تسک‌های انجام شده</h2>
+            <p>3 تسک انجام شده است.</p>
+            <ul>
+                <li>خرید میوه و سبزیجات و لبنیات برای خانه</li>
+                <li>تماس با مبل فروشی در مورد تاخیر در ارسال</li>
+                <li>جلسه با مرتضی در مورد مصاحبه با کارآموز ادمین پنل</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
