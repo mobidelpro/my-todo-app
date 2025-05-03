@@ -37,14 +37,16 @@
     </aside>
     <main class="content">
         <section class="tasks-today">
-            <h2>تسک‌های امروز</h2>
+            <div >
+            <h2 >تسک‌های امروز</h2>
             <p>3 تسک را باید انجام دهید.</p>
-            <button id="add-task">افزودن وظیفه جدید</button>
-            <ul id="task-list">
-                <li>جلسه با مدیران پروژه</li>
-                <li>خرید میوه و سبزیجات و لبنیات برای خانه</li>
-                <li>تماس با جمشید</li>
-            </ul>
+            </div>
+            <button id="add-task" class="button">+ افزودن وظیفه جدید </button>
+            <div class="empty-task">
+              <img src="./assets/images/Empty task.png" alt="empty-task" />
+              <p class="caption">چه کارهایی امروز برای انجام داری؟</p>
+              <p class="sub-caption">میتونی الان تسک‌هاتو اینجا بنویسی و برنامه ریزی رو شروع کنی!</p>
+            </div>
         </section>
         <section class="tasks-done">
             <h2>تسک‌های انجام شده</h2>

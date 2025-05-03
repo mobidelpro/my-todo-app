@@ -49,7 +49,7 @@
     outline: none;
   }
   body {
-    background-color: var(--neutral-200);
+    background-color: var(--background-light);
     display: flex;
   }
   
@@ -83,11 +83,14 @@
     color: #e9e9e9;
   }
   .content {
+    font-family: yekanRegular;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-top: 30px;
+    gap: 100px;
   }
   .info {
     display: flex;
@@ -157,4 +160,55 @@
   .toggle-button .light a {
     color: #525252;
   }
+/*ادامه استایل */
+.tasks-today{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.task-today h2{
+  font-size: 20px;
+  font-weight: bold;
+  color: #242424;
+}
+.tasks-today p{
+font-size: 14px;
+font-weight: 800;
+color: #696969;
+padding-top: 5px;
+}
+.button{
+  background-color: white;
+  border: 1px dashed #cccccc;
+  color: #007bff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+  padding-left: 390px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.empty-task{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.empty-task img{
+  width: 283px;
+}
+.caption{
+  padding-top: 20px;
+font-size: 16px;
+font-weight: 800;
+color: #7d7d7f;
+}
+.sub-caption{
+font-size: 14px;
+font-weight: 600;
+color: #afaeb2;
+}
   
