@@ -346,6 +346,17 @@ body {
   position: relative;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 }
+.stripe-low::after {
+  background-color: #90f677;
+}
+
+.stripe-medium::after {
+  background-color: #ffc107;
+}
+
+.stripe-high::after {
+  background-color: #e63946;
+}
 
 .tasks-done li::after {
   content: "";
@@ -355,7 +366,7 @@ body {
   height: 100%;
   width: 4px;
   border-radius: 0 16px 16px 0;
-  background-color: orange;
+
 }
 
 .tasks-done input[type="checkbox"] {
