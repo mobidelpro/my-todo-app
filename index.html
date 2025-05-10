@@ -37,26 +37,24 @@
     </aside>
     <main class="content">
         <section class="tasks-today">
-            <div >
-            <h2 >تسک‌های امروز</h2>
-            <p>3 تسک را باید انجام دهید.</p>
+            <div>
+                <h2>تسک‌های امروز</h2>
+                <p id="today-count">0 تسک را باید انجام دهید.</p>
             </div>
             <button id="add-task" class="button">+ افزودن وظیفه جدید </button>
             <div class="empty-task">
-              <img src="./assets/images/Empty task.png" alt="empty-task" />
-              <p class="caption">چه کارهایی امروز برای انجام داری؟</p>
-              <p class="sub-caption">میتونی الان تسک‌هاتو اینجا بنویسی و برنامه ریزی رو شروع کنی!</p>
+                <img src="./assets/images/Empty task.png" alt="empty-task" />
+                <p class="caption">چه کارهایی امروز برای انجام داری؟</p>
+                <p class="sub-caption">میتونی الان تسک‌هاتو اینجا بنویسی و برنامه ریزی رو شروع کنی!</p>
             </div>
         </section>
+
         <section class="tasks-done">
             <h2>تسک‌های انجام شده</h2>
-            <p>3 تسک انجام شده است.</p>
-            <ul>
-                <li>خرید میوه و سبزیجات و لبنیات برای خانه</li>
-                <li>تماس با مبل فروشی در مورد تاخیر در ارسال</li>
-                <li>جلسه با مرتضی در مورد مصاحبه با کارآموز ادمین پنل</li>
-            </ul>
+            <p id="done-count">0 تسک انجام شده است.</p>
+            <ul id="done-task-list"></ul>
         </section>
     </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
