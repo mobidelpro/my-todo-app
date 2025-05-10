@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ${title}
       <input type="checkbox" checked disabled />
     `;
-    doneItem.style.setProperty("--stripe-color", getPriorityColor(priority));
+    doneItem.classList.add(`stripe-${priority}`);
     tasksDoneList.appendChild(doneItem);
   }
 
