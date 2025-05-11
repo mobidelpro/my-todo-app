@@ -257,8 +257,8 @@ body {
   display: flex;
   flex-direction: column;
 }
-.threedot-container{
-  justify-content: flex-end;
+.threedot{
+  cursor: pointer;
 }
 .task-header .title {
   font-weight: 600;
