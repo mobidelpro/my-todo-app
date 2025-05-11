@@ -172,9 +172,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const doneItem = document.createElement("li");
     doneItem.classList.add("completed"); // ← برای خط خوردن
     doneItem.innerHTML = `
-      ${title}
-      <input type="checkbox" checked disabled />
+    <div class="dones-container">
+      <div class="dones">
+      <input type="checkbox" checked/>
+      <div class="nameOfDoneTask">
+        <span>${title}</span>
+      </div>
+      </div>
+      <div class="threedot-container">
+        <div class="threedot">⋮</div>
+        </div>
+    </div>
     `;
+    
     doneItem.style.setProperty("--stripe-color", getPriorityColor(priority));
     doneItem.classList.add(`stripe-${priority}`);
     tasksDoneList.appendChild(doneItem);
