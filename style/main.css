@@ -262,9 +262,26 @@ body {
 }
 
 .actions {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  border: 1px solid;
+  border-radius: 8px;
+  border-color: #EBEDEF;
   display: flex;
   gap: 8px;
   margin-right: auto;
+}
+.task-header .threedot{
+  cursor: pointer;
+}
+.task-header .hidden{
+  display: none;
+}
+.task-item .tag{
+  position: absolute;
+  top: 10px;
+  right: 100px;
 }
 
 .actions button {
@@ -485,3 +502,7 @@ body {
   font-family: yekanRegular;
   color: #AFAEB2;
 }
+.completed { 
+  text-decoration: line-through;
+   color: gray; 
+  }

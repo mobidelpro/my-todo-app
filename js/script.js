@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById(
       "today-count"
     ).textContent = `${count} تسک را باید انجام دهید.`;
-  }
+  } 
 
   function updateDoneCount() {
     const count = document.querySelectorAll("#done-task-list li").length;
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <input type="text" id="task-title" placeholder="نام تسک" value="${titleVal}" />
       <textarea id="task-desc" placeholder="توضیحات">${descVal}</textarea>
       <div class="tag-selector">
-        <button type="button" id="tag-toggle">تگ‌ها</button>
+        <button type="button" id="tag-toggle"><img src="./assets/images/tag-right.svg" alt="select"/>تگ‌ها</button>
         <div class="tag-options hidden">
           <div class="priority">
             <span data-priority="low" class="tag low ${prioVal === "low" ? "selected" : ""}">پایین</span>
@@ -117,7 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <input type="checkbox" class="complete-checkbox" />
         <span class="title">${title}</span>
         <span class="tag ${priority}">${getPriorityLabel(priority)}</span>
-        <div class="actions">
+        <div class="threedot">⋮</div>
+        <div class="actions hidden">
           <button class="edit-btn"><img src="./assets/images/edit.svg" alt="ویرایش" /></button>
           <button class="delete-btn"><img src="./assets/images/Delete.svg" alt="حذف" /></button>
         </div>
@@ -137,6 +138,11 @@ document.addEventListener("DOMContentLoaded", function () {
       updateTodayCount();
       updateDoneCount();
     });
+
+    task.querySelector(".threedot").addEventListener("click",() =>{
+      const option = task.querySelector(".actions");
+      option.classList.toggle("hidden")
+    })
 
     task.querySelector(".delete-btn").addEventListener("click", () => {
       task.remove();
@@ -176,6 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   addTaskButton.addEventListener("click", () => {
+    emptyTask.style.display = "none"; //برای حذف تسک خالی
     if (document.querySelector(".task-form")) return;
     createTaskForm();
   });
