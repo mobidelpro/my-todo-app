@@ -55,11 +55,14 @@ body {
 /* sidebar */
 .sidebar {
   background-color: var(--background-light);
-  width: 22%;
+  width: 18%;
   margin-right: 30px;
   margin-top: 20px;
+  /* margin-left: 40px; */
   box-shadow: 0px 4px 58.5px 0px #0000000f;
   border-radius: 16px;
+  /* height: 100%; */
+  position: fixed;
 }
 .sidebar ul li,
 .exit {
@@ -92,10 +95,11 @@ body {
   font-family: yekanRegular;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   margin-top: 50px;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  margin-right: 260px;
   padding-top: 30px;
   gap: 100px;
 }
@@ -134,7 +138,7 @@ body {
   font-family: yekanRegular;
   height: 45px;
   margin-bottom: 20px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .toggle-button .dark,
@@ -570,3 +574,6 @@ body {
   color: #888;
   padding-left: 10px;
 }
+
+
+/* responsive */
