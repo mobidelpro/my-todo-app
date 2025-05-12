@@ -164,8 +164,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <span>${title}</span>
           </div>
         </div>
-        <div class="threedot-container">
-          <div class="threedot">⋮</div>
+        <div class="delete-task">
+          <button class="delete"><img src="./assets/images/Delete.svg" alt="حذف" /></button>
         </div>
       </div>
     `;
@@ -173,6 +173,10 @@ document.addEventListener("DOMContentLoaded", function () {
     doneItem.style.setProperty("--stripe-color", getPriorityColor(priority));
     doneItem.classList.add(`stripe-${priority}`);
     tasksDoneList.appendChild(doneItem);
+    
+    doneItem.querySelector(".delete").addEventListener("click", () => {
+     doneItem.remove();
+    });
   }
 
   function getPriorityLabel(priority) {
