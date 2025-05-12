@@ -79,6 +79,14 @@ body {
   display: flex;
   gap: 10px;
 }
+.sidebar ul li:hover{
+  background-color: #f5faff;
+  border-radius: 8px;
+}
+.sidebar .exit:hover{
+  background-color: #f5faff;
+  border-radius: 8px;
+}
 .sidebar hr {
   margin: 0 auto;
   width: 80%;
