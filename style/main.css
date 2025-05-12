@@ -571,10 +571,12 @@ body {
   transform: translateY(-50%);
 }
 
-.threedot-container {
+.delete-task button{
   cursor: pointer;
-  color: #888;
-  padding-left: 10px;
+  background-color: #ffffff;
+  border: none;
+  /*color: #888;*/
+  padding: 10px;
 }
 
 .res-header{

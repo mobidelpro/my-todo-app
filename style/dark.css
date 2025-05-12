@@ -427,6 +427,7 @@ body {
 
 .task-form {
   background-color: #060c18;
+  border: 1px solid #3D3D3D;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   padding: 20px;
@@ -604,10 +605,12 @@ body {
   transform: translateY(-50%);
 }
 
-.threedot-container {
+.delete-task button{
   cursor: pointer;
-  color: #888;
-  padding-left: 10px;
+  background-color: #091120;
+  border: none;
+  /*color: #888;*/
+  padding: 10px;
 }
 
 .res-header {
