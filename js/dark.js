@@ -188,13 +188,19 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </div>
     `;
-    
+    document.querySelector(".tasks-done").style.display = "block";
+
     doneItem.style.setProperty("--stripe-color", getPriorityColor(priority));
     doneItem.classList.add(`stripe-${priority}`);
     tasksDoneList.appendChild(doneItem);
 
     doneItem.querySelector(".delete").addEventListener("click", () => {
     doneItem.remove();
+    updateDoneCount();
+    
+    if (tasksDoneList.children.length === 0) {
+      document.querySelector(".tasks-done").style.display = "none";
+    }
     });
   }
 
