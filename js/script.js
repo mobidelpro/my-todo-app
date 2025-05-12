@@ -211,6 +211,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector(".task-form")) return;
     createTaskForm();
   });
+   
+  document.getElementById("dark-toggle").addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+    });
 
   // آپدیت اولیه
   updateTodayCount();

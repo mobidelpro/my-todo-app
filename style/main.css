@@ -51,6 +51,87 @@ body {
   font-family: yekanRegular;
   overflow-x: hidden;
 }
+body.dark-mode{
+  background-color: #060C18;
+}
+body.dark-mode .sidebar{
+  background-color: #091120;
+  color: #ffffff;
+}
+body.dark-mode .sidebar ul li a{
+  color: #ffffff;
+}
+body.dark-mode .sidebar .exit{
+  color: #ffffff;
+}
+
+body.dark-mode .toggle-button {
+  background-color: #002247;
+  color: white;
+}
+body.dark-mode .toggle-button .light{
+  background-color: #0C1B31;
+}
+body.dark-mode #home{
+  background-color: #041933;
+}
+body.dark-mode #home a{
+  color: #ffffff;
+}
+body.dark-mode .sidebar hr{
+  color: #2F3132;
+}
+body.dark-mode .content h2{
+  color: #ffffff;
+}
+body.dark-mode .content .button{
+  background-color: #091120;
+  border: 1px dashed #203E62;
+  color: #57A8FF;
+}
+body.dark-mode .task-form{
+  background-color: #060C18;
+  border: 1px solid #3D3D3D;
+}
+body.dark-mode .task-form #task-title{
+  background-color: #060c18;
+  color: #ffffff;
+}
+body.dark-mode .task-form #task-desc{
+  background-color: #060c18;
+  color: #ffffff;
+}
+body.dark-mode .task-form #tag-toggle{
+  background-color: #060c18;
+  color: #ffffff;
+}
+body.dark-mode .task-form #submit-task{
+  background-color: #002247;
+  color: #ffffff;
+}
+body.dark-mode .task-form .priority{
+  background-color: #0B192D;
+  border: 1px solid #293242;
+}
+body.dark-mode .low{
+  background-color:#233332 ;
+  color: #02E1A2;
+  border: none;
+}
+body.dark-mode .medium{
+  background-color:#302F2D ;
+  color: #FFAF37;
+  border: none;
+}
+body.dark-mode .high{
+  background-color:#3D2327;
+  color: #FF5F37;
+  border: none;
+}
+body.dark-mode .task-item{
+  background-color: #091120;
+}
+
 
 /* sidebar */
 .sidebar {
