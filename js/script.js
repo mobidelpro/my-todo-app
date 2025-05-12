@@ -6,16 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateTodayCount() {
     const count = document.querySelectorAll(".task-item").length;
-    document.getElementById(
-      "today-count"
-    ).textContent = `${count} تسک را باید انجام دهید.`;
+    document.getElementById("today-count").textContent = `${count} تسک را باید انجام دهید.`;
   }
 
   function updateDoneCount() {
     const count = document.querySelectorAll("#done-task-list li").length;
-    document.getElementById(
-      "done-count"
-    ).textContent = `${count} تسک انجام شده است.`;
+    document.getElementById("done-count").textContent = `${count} تسک انجام شده است.`;
   }
 
   function createTaskForm(existingTask = null) {
@@ -33,22 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
         <button type="button" id="tag-toggle"><img src="./assets/images/tag-right.svg" alt="select"/>تگ‌ها</button>
         <div class="tag-options hidden">
           <div class="priority">
-            <span data-priority="low" class="tag low ${
-              prioVal === "low" ? "selected" : ""
-            }">پایین</span>
-            <span data-priority="medium" class="tag medium ${
-              prioVal === "medium" ? "selected" : ""
-            }">متوسط</span>
-            <span data-priority="high" class="tag high ${
-              prioVal === "high" ? "selected" : ""
-            }">بالا</span>
+            <span data-priority="low" class="tag low ${prioVal === "low" ? "selected" : ""}">پایین</span>
+            <span data-priority="medium" class="tag medium ${prioVal === "medium" ? "selected" : ""}">متوسط</span>
+            <span data-priority="high" class="tag high ${prioVal === "high" ? "selected" : ""}">بالا</span>
           </div>
         </div>
       </div>
       <hr>
-      <button id="submit-task">${
-        existingTask ? "ویرایش تسک" : "اضافه کردن تسک"
-      }</button>
+      <button id="submit-task">${existingTask ? "ویرایش تسک" : "اضافه کردن تسک"}</button>
     `;
 
     tasksTodaySection.insertBefore(formWrapper, emptyTask);
@@ -70,9 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     formWrapper.querySelectorAll(".tag").forEach((tag) => {
       tag.addEventListener("click", () => {
-        formWrapper
-          .querySelectorAll(".tag")
-          .forEach((t) => t.classList.remove("selected"));
+        formWrapper.querySelectorAll(".tag").forEach((t) => t.classList.remove("selected"));
         tag.classList.add("selected");
         selectedPriority = tag.dataset.priority;
         toggle.textContent = `${tag.textContent}`;
@@ -124,23 +110,22 @@ document.addEventListener("DOMContentLoaded", function () {
     task.innerHTML = `
       <div class="task-header">
         <div class="task-right">
-        <input type="checkbox" class="complete-checkbox" />
-        <span class="title">${title}</span>
-        <span class="tag ${priority}">${getPriorityLabel(priority)}</span></div>
+          <input type="checkbox" class="complete-checkbox" />
+          <span class="title">${title}</span>
+          <span class="tag ${priority}">${getPriorityLabel(priority)}</span>
+        </div>
         <div class="btns">
-        <div class="threedot-container">
-        <div class="threedot">⋮</div>
-        </div>
-        <div class="actions hidden">
-          <button class="edit-btn"><img src="./assets/images/edit.svg" alt="ویرایش" /></button>
-          <button class="delete-btn"><img src="./assets/images/Delete.svg" alt="حذف" /></button>
-        </div>
+          <div class="threedot-container">
+            <div class="threedot">⋮</div>
+          </div>
+          <div class="actions hidden">
+            <button class="edit-btn"><img src="./assets/images/edit.svg" alt="ویرایش" /></button>
+            <button class="delete-btn"><img src="./assets/images/Delete.svg" alt="حذف" /></button>
+          </div>
         </div>
       </div>
       ${desc ? `<p class="description">${desc}</p>` : ""}
-      <span class="priority-indicator" style="background-color:${
-        priorityColor[priority]
-      }"></span>
+      <span class="priority-indicator" style="background-color:${priorityColor[priority]}"></span>
     `;
 
     tasksTodaySection.insertBefore(task, emptyTask);
@@ -170,32 +155,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function moveToDone(title, priority) {
     const doneItem = document.createElement("li");
-    doneItem.classList.add("completed"); // ← برای خط خوردن
+    doneItem.classList.add("completed");
     doneItem.innerHTML = `
-    <div class="dones-container">
-      <div class="dones">
-      <input type="checkbox" checked/>
-      <div class="nameOfDoneTask">
-        <span>${title}</span>
-      </div>
-      </div>
-      <div class="threedot-container">
-        <div class="threedot">⋮</div>
+      <div class="dones-container">
+        <div class="dones">
+          <input type="checkbox" checked/>
+          <div class="nameOfDoneTask">
+            <span>${title}</span>
+          </div>
         </div>
-    </div>
+        <div class="threedot-container">
+          <div class="threedot">⋮</div>
+        </div>
+      </div>
     `;
-    
+
     doneItem.style.setProperty("--stripe-color", getPriorityColor(priority));
     doneItem.classList.add(`stripe-${priority}`);
     tasksDoneList.appendChild(doneItem);
   }
 
   function getPriorityLabel(priority) {
-    return priority === "low"
-      ? "پایین"
-      : priority === "medium"
-      ? "متوسط"
-      : "بالا";
+    return priority === "low" ? "پایین" : priority === "medium" ? "متوسط" : "بالا";
   }
 
   function getPriorityColor(priority) {
@@ -207,12 +188,46 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   addTaskButton.addEventListener("click", () => {
-    emptyTask.style.display = "none"; //برای حذف تسک خالی
+    emptyTask.style.display = "none";
     if (document.querySelector(".task-form")) return;
     createTaskForm();
   });
 
-  // آپدیت اولیه
   updateTodayCount();
   updateDoneCount();
+
+  // === Sidebar Toggle Logic ===
+  const hamb = document.querySelector(".hamb");
+  const resSidebar = document.querySelector(".res-sidebar");
+  const cross = document.querySelector(".res-top img");
+
+  function openSidebar() {
+    resSidebar.style.display = "block";
+    resSidebar.classList.add("active");
+  }
+
+  function closeSidebar() {
+    resSidebar.style.display = "none";
+    resSidebar.classList.remove("active");
+  }
+
+  hamb.addEventListener("click", (e) => {
+    e.stopPropagation();
+    openSidebar();
+  });
+
+  cross.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeSidebar();
+  });
+
+  document.addEventListener("click", (e) => {
+    if (
+      resSidebar.classList.contains("active") &&
+      !resSidebar.contains(e.target) &&
+      !hamb.contains(e.target)
+    ) {
+      closeSidebar();
+    }
+  });
 });
