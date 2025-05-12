@@ -54,7 +54,8 @@ body {
 }
 
 /* sidebar */
-.sidebar {
+.sidebar,
+.res-sidebar {
   background-color: var(--background-light);
   width: 18%;
   margin-right: 30px;
@@ -68,6 +69,7 @@ body {
   color: #ffffff;
 }
 .sidebar ul li,
+.res-sidebar ul li,
 .exit {
   list-style-type: none;
   font-family: yekanRegular;
@@ -76,6 +78,7 @@ body {
   display: flex;
 }
 .sidebar ul li a,
+.res-sidebar ul li a,
 .exit {
   text-decoration: none;
   color: #ffffff;
@@ -290,7 +293,7 @@ body {
   position: absolute;
   top: 40px;
   left: 10px;
-  background-color: #0B192D;
+  background-color: #0b192d;
   border-radius: 8px;
   padding: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -333,7 +336,7 @@ body {
 .dones input[type="checkbox"] {
   appearance: none;
   background-color: #091120;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #cccccc;
   border-radius: 4px;
   width: 16px;
   height: 16px;
@@ -432,9 +435,9 @@ body {
   gap: 15px;
   margin-top: 20px;
 }
-#task-title{
-    background-color: #060C18 !important;
-    color: #ffffff !important;
+#task-title {
+  background-color: #060c18 !important;
+  color: #ffffff !important;
 }
 .task-form hr {
   height: 1px;
@@ -616,6 +619,9 @@ body {
 .res-profile {
   display: none;
 }
+.res-sidebar {
+  display: none;
+}
 /* responsive */
 @media (max-width: 768px) {
   .sidebar {
@@ -660,7 +666,7 @@ body {
   .tasks-done {
     padding: 10px;
   }
- .tag-options .priority {
+  .tag-options .priority {
     width: 100%;
     background-color: #0b192d;
     border: 1px solid #293242;
@@ -668,5 +674,24 @@ body {
   #submit-task {
     width: 70% !important;
     font-size: 10px !important;
+  }
+  .res-top{
+    display: flex;
+    margin-right: 25px;
+    position: relative;
+  }
+  .res-top img{
+    margin-right: 85%;
+    position: absolute;
+  }
+  .res-top h4{
+    font-family: yekanRegular;
+    font-size: 12px;
+  }
+  .res-sidebar {
+    display: block;
+    width: 60%;
+    margin-right: -35%;
+    margin-top: -200px;
   }
 }
