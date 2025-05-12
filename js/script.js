@@ -39,8 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
       <button id="submit-task">${existingTask ? "ویرایش تسک" : "اضافه کردن تسک"}</button>
     `;
 
-    tasksTodaySection.insertBefore(formWrapper, emptyTask);
-
+    const firstTask = tasksTodaySection.querySelector(".task-item");
+    if (firstTask) {
+      tasksTodaySection.insertBefore(formWrapper, firstTask);
+    } else {
+      tasksTodaySection.insertBefore(formWrapper, emptyTask);
+    }
     let selectedPriority = prioVal;
 
     const toggle = formWrapper.querySelector("#tag-toggle");
