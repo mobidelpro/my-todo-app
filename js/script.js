@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addTaskToToday(title, desc, priority) {
+    if (emptyTask) emptyTask.style.display = 'none';
     const task = document.createElement("div");
     task.classList.add("task-item");
     task.dataset.title = title;
@@ -192,11 +193,14 @@ document.addEventListener("DOMContentLoaded", function () {
     doneItem.querySelector(".delete").addEventListener("click", () => {
      doneItem.remove();
      updateDoneCount();
+     saveDoneTasks();
 
      if (tasksDoneList.children.length === 0) {
       document.querySelector(".tasks-done").style.display = "none";
     }
     });
+
+    saveDoneTasks(); // ذخیره تسک‌های انجام‌شده
   }
 
   function getPriorityLabel(priority) {
