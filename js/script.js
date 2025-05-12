@@ -4,6 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const tasksDoneList = document.getElementById("done-task-list");
   const emptyTask = document.querySelector(".empty-task");
 
+  // 🟢 بازیابی تسک‌ها از localStorage
+  const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  savedTasks.forEach(task => {
+    addTaskToToday(task.title, task.desc, task.priority);
+  });
+
+
   function updateTodayCount() {
     const count = document.querySelectorAll(".task-item").length;
     document.getElementById("today-count").textContent = `${count} تسک را باید انجام دهید.`;
@@ -95,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       addTaskToToday(title, desc, selectedPriority);
       formWrapper.remove();
       emptyTask.style.display = "none";
+      saveTasks(); 
     });
   }
 
@@ -140,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
       task.remove();
       updateTodayCount();
       updateDoneCount();
+      saveTasks(); // ذخیره بعد از تکمیل
     });
 
     task.querySelector(".threedot").addEventListener("click", () => {
@@ -150,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
     task.querySelector(".delete-btn").addEventListener("click", () => {
       task.remove();
       updateTodayCount();
+      saveTasks(); // ذخیره بعد از حذف
     });
 
     task.querySelector(".edit-btn").addEventListener("click", () => {
@@ -199,6 +209,18 @@ document.addEventListener("DOMContentLoaded", function () {
       : priority === "medium"
       ? "#ffc107"
       : "#e63946";
+  }
+  // 🔵 تابع ذخیره در localStorage
+  function saveTasks() {
+    const tasks = [];
+    document.querySelectorAll(".task-item").forEach(task => {
+      tasks.push({
+        title: task.dataset.title,
+        desc: task.dataset.desc,
+        priority: task.dataset.priority
+      });
+    });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }
 
   addTaskButton.addEventListener("click", () => {
