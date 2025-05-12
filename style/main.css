@@ -53,7 +53,7 @@ body {
 }
 
 /* sidebar */
-.sidebar {
+.sidebar, .res-sidebar {
   background-color: var(--background-light);
   width: 18%;
   margin-right: 30px;
@@ -64,7 +64,7 @@ body {
   /* height: 100%; */
   position: fixed;
 }
-.sidebar ul li,
+.sidebar ul li,.res-sidebar ul li,
 .exit {
   list-style-type: none;
   font-family: yekanRegular;
@@ -72,7 +72,7 @@ body {
   padding: 10px;
   display: flex;
 }
-.sidebar ul li a,
+.sidebar ul li a,.res-sidebar ul li a,
 .exit {
   text-decoration: none;
   color: #525252;
@@ -586,6 +586,9 @@ body {
 .res-profile{
   display: none;
 }
+.res-sidebar {
+  display: none;
+}
 /* responsive */
 @media (max-width: 768px) {
   .sidebar{
@@ -635,5 +638,26 @@ body {
   #submit-task{
     width: 70% !important;
     font-size: 10px !important;
+  }
+  .res-top{
+    display: flex;
+    margin-right: 25px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .res-top img{
+    margin-right: 85%;
+    position: absolute;
+  }
+  .res-top h4{
+    font-family: yekanRegular;
+    font-size: 12px;
+  }
+  .res-sidebar {
+    display: block;
+    width: 60%;
+    margin-right: -35%;
+    margin-top: -200px;
   }
 }
