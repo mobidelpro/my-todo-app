@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
     addTaskToToday(task.title, task.desc, task.priority);
   });
 
+    // 🟢 بازیابی تسک‌های انجام‌شده از localStorage
+    const savedDoneTasks = JSON.parse(localStorage.getItem("doneTasks")) || [];
+    savedDoneTasks.forEach(task => {
+      moveToDone(task.title, task.priority);
+    });
+
 
   function updateTodayCount() {
     const count = document.querySelectorAll(".task-item").length;
@@ -225,6 +231,18 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
     localStorage.setItem("tasks", JSON.stringify(tasks));
+  }
+
+  // 🔵 تابع ذخیره تسک‌های انجام‌شده
+  function saveDoneTasks() {
+    const doneTasks = [];
+    tasksDoneList.querySelectorAll("li").forEach(task => {
+      const title = task.querySelector("span").textContent;
+      const priority = task.classList.contains("stripe-high") ? "high" :
+                       task.classList.contains("stripe-medium") ? "medium" : "low";
+      doneTasks.push({ title, priority });
+    });
+    localStorage.setItem("doneTasks", JSON.stringify(doneTasks));
   }
 
   addTaskButton.addEventListener("click", () => {
