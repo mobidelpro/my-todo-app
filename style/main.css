@@ -604,9 +604,7 @@ body {
   .hamb{
     cursor: pointer;
   }
-  .hamb:active{
-    display: none;
-  }
+  
   .logo-container {
     text-align: center;
     width: 100%;
@@ -655,9 +653,11 @@ body {
     font-size: 12px;
   }
   .res-sidebar {
-    display: block;
+    display: none;
     width: 60%;
     margin-right: -35%;
     margin-top: -200px;
+    background-color: white;
+  transition: transform 0.3s ease;
   }
 }
